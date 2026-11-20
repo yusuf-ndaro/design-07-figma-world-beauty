@@ -1,20 +1,99 @@
-*{
-box-sizing: border-box;
-border: 0;
-margin: 0;
-padding: 0;
-}
-img{
-width: auto;
-height: auto;
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.box{
-gap: ;
-
-margin-inline: auto;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #252525;
+  background-color: #ffffff;
 }
 
-.images{
-display: flex;
+img {
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.box {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 60px 24px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 56px;
+  color: #252525;
+}
+
+/* 4 equal columns side-by-side */
+.images {
+  display: flex;
+  gap: 24px;
+}
+
+.card {
+  flex: 1;
+}
+
+/* Faded gray numbers 01 - 04 */
+.card h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #b5b5b5;
+  margin-bottom: 12px;
+}
+
+/* Paragraph above the image */
+.top-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4a4a4a;
+  margin-bottom: 24px;
+}
+
+/* Rounded card container */
+.card-image-box {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Subtle dark gradient at the bottom so text is readable */
+.card-image-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0) 45%
+  );
+  pointer-events: none;
+}
+
+/* Text sitting inside the bottom of the image */
+.overlay-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 1;
+  color: #252525;
+}
+
+.overlay-text h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.overlay-text p {
+  font-size: 0.85rem;
+  line-height: 1.4;
 }
